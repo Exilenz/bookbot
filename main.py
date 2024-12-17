@@ -4,6 +4,17 @@ def main():
     num_words = get_num_words(text)
     print(f"{num_words} words found in the document")
 
+    chars = {}
+    string = text.lower()
+
+    for c in string:
+        if c in chars:
+            chars[c] += 1
+        else:
+            chars[c] = 1
+    print(chars)
+    
+    
 
 def get_num_words(text):
     words = text.split()
